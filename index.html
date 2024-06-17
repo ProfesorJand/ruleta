@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruleta Giratoria</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="panel">
+        <h2>Panel de Control</h2>
+        <!-- <input type="text" id="option-input" placeholder="Añadir opción">
+        <button id="add-option">Añadir</button>
+        <select name="cars" id="remove-option-input1"></select>
+        <input type="text" id="remove-option-input" placeholder="Opción a eliminar">
+        <button id="remove-option">Eliminar</button> -->
+        <label>
+            <input type="checkbox" id="toggle-roulette" hidden>
+            Ruleta Mágica
+        </label>
+    </div>
+    <div id="wheel-info-container">
+        <div id="wheel-container">
+            <canvas id="wheel" width="500" height="500"></canvas>
+        <button id="spin">Girar</button>
+        <button id="stop" style="display:none;">Detener</button>
+        </div>
+
+        <div id="info-container">
+            
+        </div>
+    </div> 
+
+    <!-- Modal -->
+    <div id="result-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="result-text"></p>
+        </div>
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
