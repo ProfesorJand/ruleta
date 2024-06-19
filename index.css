@@ -5,16 +5,36 @@ body {
     padding: 0;
 }
 
-#wheel-info-container{
+#container-body{
+    display: flex;
+    flex-direction: row;
+}
+
+.container-unit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+.panel{
+    display: flex;
+    position: relative;
+    top: 0;
+}
+
+.wheel-info-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
-    padding: 0 1rem;
+    min-height: 750px;
 }
 
-#wheel-container {
+.wheel-container {
     display: flex;
     position: relative;
     margin: 20px auto;
@@ -26,21 +46,48 @@ body {
 }
 
 
-#info-container{
+.info-container{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     border: 2px solid black;
     border-radius: 50px;
     box-sizing: border-box;
-    padding: 1rem;
+    padding: 2rem;
     width: 50%;
+    margin: 2rem;
+}
+
+.infoText{
+    text-align: left;
+    padding: 1rem;
+}
+
+.disable{
+    pointer-events:none;
+    background-color: red;
 }
 
 
 
-#spin, #stop {
-    margin-top: 20px;
+.spin, .stop {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid red;
+    cursor: pointer;
+    transition: background-color 1s;
+   font-weight: 600;
+    font-variant: small-caps;
+}
+
+.spin:hover, .stop:hover{
+   
+    background-color: aqua;
 }
 
 .modal {
@@ -61,6 +108,7 @@ body {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    border-radius: 10px;
 }
 
 .close {

@@ -7,37 +7,73 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <div id="panel">
-        <!-- <input type="text" id="option-input" placeholder="Añadir opción">
-        <button id="add-option">Añadir</button>
-        <select name="cars" id="remove-option-input1"></select>
-        <input type="text" id="remove-option-input" placeholder="Opción a eliminar">
-        <button id="remove-option">Eliminar</button> -->
-        <h1>
-            <input type="checkbox" id="toggle-roulette" hidden>
-            Ruleta Mágica
-        </h1>
+    <div id="container-body">
+        <div class="container-unit">
+            <div class="panel">
+                <!-- <input type="text" id="option-input" placeholder="Añadir opción">
+                <button id="add-option">Añadir</button>
+                <select name="cars" id="remove-option-input1"></select>
+                <input type="text" id="remove-option-input" placeholder="Opción a eliminar">
+                <button id="remove-option">Eliminar</button> -->
+                <h1>
+                    <input type="checkbox" class="toggle-roulette" hidden>
+                    Ruleta Mágica
+                </h1>
+                <audio class="myAudio">
+                    <source src="Disco_TFT_Slow Groovin_Disconauts.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="wheel-info-container">
+                <div class="info-container">
+                    
+                </div>
+                <div class="wheel-container">
+                    <canvas class="wheel" width="500" height="500"></canvas>
+                    <button class="spin">Girar</button>
+                    <button class="stop" style="display:none;">Detener</button>
+                </div>
+                
+                
+            </div> 
+        </div>
+        <div class="container-unit">
+            <div class="panel">
+                <!-- <input type="text" id="option-input" placeholder="Añadir opción">
+                <button id="add-option">Añadir</button>
+                <select name="cars" id="remove-option-input1"></select>
+                <input type="text" id="remove-option-input" placeholder="Opción a eliminar">
+                <button id="remove-option">Eliminar</button> -->
+                <h1>
+                    <input type="checkbox" class="toggle-roulette" hidden>
+                    Ruleta Caótica
+                </h1>
+                <audio class="myAudio">
+                    <source src="Disco_TFT_Slow Groovin_Disconauts.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+            <div class="wheel-info-container">
+                <div class="wheel-container">
+                    <canvas class="wheel" width="500" height="500"></canvas>
+                    <button class="spin">Girar</button>
+                    <button class="stop" style="display:none;">Detener</button>
+                </div>
+                <div class="info-container">
+                    
+                </div>
+            </div> 
+        </div>
     </div>
-    <div id="wheel-info-container">
-        <div id="wheel-container">
-            <canvas id="wheel" width="500" height="500"></canvas>
-        <button id="spin">Girar</button>
-        <button id="stop" style="display:none;">Detener</button>
-        </div>
-
-        <div id="info-container">
-            
-        </div>
-    </div> 
-
-    <!-- Modal -->
-    <div id="result-modal" class="modal">
-        <div class="modal-content">
+        <!-- Modal -->
+        <div id="result-modal" class="modal">
+            <div class="modal-content">
             <span class="close">&times;</span>
             <p id="result-text"></p>
         </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script src="./index.js"></script>
 </body>
 </html>
